@@ -2,8 +2,11 @@
 
 namespace App\Controller;
 
+use App\Entity\Contact;
+use App\Form\ContactType;
 use App\Form\PhoneType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
 class LandingController extends AbstractController
@@ -15,24 +18,31 @@ class LandingController extends AbstractController
     {
         $formPhone = $this->createForm(PhoneType::class);
         return $this->render('landing/initial.html.twig', [
-            'controller_name' => 'LandingController',
             'phone' => $formPhone->createView(),
         ]);
     }
 
-//    /**
-//     * @Route("/contacto", name="landing")
-//     */
-//    public function contact()
-//    {
-//
-//        $formPhone = $this->createForm(PhoneType::class);
-//
-//        return $this->render('landing/initial.html.twig', [
-//            'controller_name' => 'LandingController',
-//            'phone' => $formPhone->createView(),
-//        ]);
-//    }
+    /**
+     * @Route("/contacto", name="contacto")
+     */
+    public function contact(Request $request)
+    {
+
+        $contact = new Contact();
+        $formContact = $this->createForm(ContactType::class, $contact);
+
+        $formContact->handleRequest($request);
+
+        if ($formContact->isSubmitted() && $formContact->isValid()) {
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->persist($contact);
+            $entityManager->flush();
+        }
+
+        return $this->render('landing/contact.html.twig', [
+            'contact' => $formContact->createView(),
+        ]);
+    }
 
 
 }
