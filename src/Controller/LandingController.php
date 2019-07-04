@@ -34,14 +34,26 @@ class LandingController extends AbstractController
         $formContact->handleRequest($request);
 
         if ($formContact->isSubmitted() && $formContact->isValid()) {
+
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($contact);
             $entityManager->flush();
+
+            return $this->redirectToRoute('gracias');
         }
 
         return $this->render('landing/contact.html.twig', [
             'contact' => $formContact->createView(),
         ]);
+    }
+
+    /**
+     * @Route("/thanks", name="gracias")
+     */
+    public function thanks()
+    {
+
+        return $this->render('landing/thanks.html.twig');
     }
 
 

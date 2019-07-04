@@ -12,12 +12,18 @@
     <h1>Hello</h1>
 
     <div>
-        {{ form(contact.name, {'label':'Nombre *'}) }}
-        {{ form(contact.surname) }}
-        {{ form(contact.email) }}
-        {{ form(contact.policy_1) }}
-        {{ form(contact.policy_2) }}
-        {{ form(contact.policy_3) }}
+        {{ form(contact) }}
+{#        {{ form(contact.name) }}#}
+{#        {{ form(contact.surname) }}#}
+{#        {{ form(contact.email) }}#}
+{#        {{ form(contact.policy_1) }}#}
+{#        {{ form_label(contact.policy_1) }}#}
+{#        {{ form(contact.policy_2) }}#}
+{#        {{ form_label(contact.policy_2) }}#}
+{#        {{ form(contact.policy_3) }}#}
+{#        {{ form_label(contact.policy_3) }}#}
+{#        {{ form_widget(contact.submit) }}#}
+
 
     </div>
 </div>
