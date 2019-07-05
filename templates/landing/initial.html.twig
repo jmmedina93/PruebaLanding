@@ -1,15 +1,20 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello LandingController!{% endblock %}
-
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
 
-<div class="example-wrapper">
-    <h1>Hello</h1>
+<div class="form-phone">
+    <div class="text-home">
+        <span>Gracias a</span><br>
+        <span>#LosMitosDelVerano,</span><br>
+        <span>disfruta tu experiencia por</span><br>
+        <span>ser Cliente Vodafone</span>
+    </div>
+    <div class="phone">
+        <div class="text-input">
+            <p>Introduce tu número de móvil aquí</p>
+        </div>
+
         {{ form(phone) }}
+    </div>
 </div>
 {% endblock %}

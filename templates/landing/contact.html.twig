@@ -1,30 +1,15 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello LandingController!{% endblock %}
-
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
 
 <div class="form-contact">
-    <h1>Hello</h1>
+    <div class="text-contact">
+        <span>Rellena este formulario y</span><br>
+        <span>consigue tu experiencia:</span>
+    </div>
 
-    <div>
+    <div class="box-form-contact">
         {{ form(contact) }}
-{#        {{ form(contact.name) }}#}
-{#        {{ form(contact.surname) }}#}
-{#        {{ form(contact.email) }}#}
-{#        {{ form(contact.policy_1) }}#}
-{#        {{ form_label(contact.policy_1) }}#}
-{#        {{ form(contact.policy_2) }}#}
-{#        {{ form_label(contact.policy_2) }}#}
-{#        {{ form(contact.policy_3) }}#}
-{#        {{ form_label(contact.policy_3) }}#}
-{#        {{ form_widget(contact.submit) }}#}
-
-
     </div>
 </div>
 {% endblock %}
