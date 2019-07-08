@@ -10,6 +10,8 @@ button {
     width: 120px;
     background: #e50000;
     color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
 }
 
 input {
@@ -142,16 +144,25 @@ input {
 
 #contact label {
     float: right;
+    max-width: 310px;
+    font-size: 12px;
+    margin-bottom: 5px;
 }
 
 #contact input[type="checkbox" i] {
     width: 15px;
     height: inherit;
+    margin-bottom: 25px;
 
 }
 
 #contact > div {
     margin-bottom: 10px;
+}
+
+#contact input {
+    width: 100%;
+    font-style: oblique;
 }
 
 .form-thanks {
@@ -219,4 +230,45 @@ input {
 
 .logo img {
     max-height: 70px;
+}
+
+.list-social li+li::before {
+    display: none;
+}
+
+.list-social i {
+    font-size: 16px;
+    margin-right: 20px;
+}
+
+.error {
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    background-color: #56565680;
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.error .error-text {
+    background-color: #ffffff;
+    width: 300px;
+    height: 150px;
+    margin: 300px 500px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    padding: 30px;
+    text-align: center;
+}
+
+.error .error-text .error-red {
+    font-size: 25px;
+    color: #e50000;
+    font-weight: bold;
+}
+
+.error-active {
+    display: block;
 }

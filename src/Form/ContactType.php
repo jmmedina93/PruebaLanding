@@ -18,34 +18,34 @@ class ContactType extends AbstractType
         $builder
             ->add('name', TextType::class, [
                 'attr' => [
-                    'placeholder' => 'Tu nombre *',
+                    'placeholder' => 'Tu nombre*',
                 ],
                 'label' => false,
                 'required' => true
             ])
             ->add('surname', TextType::class, [
                 'attr' => [
-                    'placeholder' => 'Tu nombre *',
+                    'placeholder' => 'Tus apellidos*',
                 ],
                 'label' => false,
                 'required' => true
             ])
             ->add('email', EmailType::class, [
                 'attr' => [
-                    'placeholder' => 'Tu nombre *',
+                    'placeholder' => 'Tu email*',
                 ],
                 'label' => false,
                 'required' => true
             ])
             ->add('policy_1', CheckboxType::class, [
-                'label' => 'Política de privacidad numero 1',
+                'label' => 'Acepto las Bases de la Promoción y Política de Privacidad y Cookies*',
                 'required' => true
             ])
             ->add('policy_2', CheckboxType::class, [
-                'label' => 'Política de privacidad numero 2'
+                'label' => 'Acepto que Vodafone trate mis datos de facturación, tráfico y navegación para enviarme comunicaciones comerciales personalizadas basadas en esta información.'
             ])
             ->add('policy_3', CheckboxType::class, [
-                'label' => 'Política de privacidad numero 3',
+                'label' => 'Acepto que Vodafone me remita comunicaciones comerciales* con ofertas que pudiera ser de mi interés procedentes de terceras empresas con als que Vodafones haya llegado a un acuerdo comercial.',
                 'required' => true
             ])
             ->add('submit', SubmitType::Class, [

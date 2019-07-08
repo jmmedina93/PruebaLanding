@@ -1,20 +1,31 @@
 {% extends 'base.html.twig' %}
 
-{% block body %}
+{%- block body -%}
 
-<div class="form-phone">
-    <div class="text-home">
-        <span>Gracias a</span><br>
-        <span>#LosMitosDelVerano,</span><br>
-        <span>disfruta tu experiencia por</span><br>
-        <span>ser Cliente Vodafone</span>
+    <div class="form-phone">
+        <div class="text-home">
+            <span>Gracias a</span><br>
+            <span>#LosMitosDelVerano,</span><br>
+            <span>disfruta tu experiencia por</span><br>
+            <span>ser Cliente Vodafone</span>
+        </div>
+        <div class="phone">
+            <div class="text-input">
+                <p>Introduce tu número de móvil aquí</p>
+            </div>
+
+            {{ form(phone) }}
+        </div>
     </div>
-    <div class="phone">
-        <div class="text-input">
-            <p>Introduce tu número de móvil aquí</p>
+    <div id="error" class="error">
+        <div class="error-text">
+            <p class="error-red">Lo sentimos</p>
+            <p>Esta experiencia es solo para clientes de Vodafone</p>
         </div>
 
-        {{ form(phone) }}
     </div>
-</div>
-{% endblock %}
+{%- endblock -%}
+
+{%- block javascripts -%}
+    <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
+{%- endblock -%}
