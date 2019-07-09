@@ -1,12 +1,15 @@
 
 <footer class="footer">
-    <ul class="list-policy">
-        <li>Base de promocion</li>
-        <li>Política de Privacidad y Cookies</li>
-        <li>Preguntas frecuentes</li>
-        <li>Condiciones generales</li>
-    </ul>
+    {%- block listPolicy -%}
+        <ul class="list-policy">
+            <li>Base de promocion</li>
+            <li>Política de Privacidad y Cookies</li>
+            <li>Preguntas frecuentes</li>
+            <li>Condiciones generales</li>
+        </ul>
+    {%- endblock -%}
 
+    {%- block listSocial -%}
     <ul class="list-social">
         <li>
             <i class="fa fa-facebook"></i>
@@ -21,4 +24,5 @@
             <span class="text-footer">#LosMitosDelVerano</span>
         </li>
     </ul>
+    {%- endblock -%}
 </footer>
